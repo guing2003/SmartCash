@@ -2,5 +2,11 @@ package com.guilherme_delecrode.smartcash.navigation
 
 sealed class AppDestinations(val route: String){
 
+    //Login Flow
     object Login : AppDestinations("login")
+
+    //Register Flow
+    object RegisterInfo : AppDestinations("register_info")
+    object RegisterPassword : AppDestinations("register_password")
+
 }

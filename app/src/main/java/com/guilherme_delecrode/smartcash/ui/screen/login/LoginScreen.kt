@@ -18,6 +18,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -32,6 +33,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
+import androidx.compose.ui.text.style.LineHeightStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -70,9 +72,6 @@ fun LoginScreen(navController: NavController) {
                         fontWeight = FontWeight.Bold
                     )
                 },
-                colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-                    containerColor = Color.White
-                )
             )
         }
     ) { padding ->
@@ -109,7 +108,6 @@ fun LoginScreen(navController: NavController) {
 
             Text(
                 text = "E-mail",
-                color = Color.Black,
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(bottom = 8.dp),
@@ -126,7 +124,6 @@ fun LoginScreen(navController: NavController) {
 
             Text(
                 text = "Senha",
-                color = Color.Black,
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(bottom = 8.dp),
@@ -150,8 +147,29 @@ fun LoginScreen(navController: NavController) {
                 enabled = email.isNotBlank() && password.isNotBlank()
             )
 
+            Spacer(modifier = Modifier.height(24.dp))
+
+            TextButton(onClick = {}) {
+                Text(
+                    text = "Esqueci minha senha!",
+                    color = MaterialTheme.colorScheme.primary,
+                    fontSize = 14.sp,
+                    textAlign = TextAlign.Center
+                )
+            }
 
             Spacer(modifier = Modifier.height(24.dp))
+
+            TextButton(onClick = {
+                navController.navigate(AppDestinations.RegisterInfo.route)
+            }) {
+                Text(
+                    text = "Não tem cadastro? Clique aqui!",
+                    color = MaterialTheme.colorScheme.primary,
+                    fontSize = 14.sp,
+                    textAlign = TextAlign.Center
+                )
+            }
 
 
         }

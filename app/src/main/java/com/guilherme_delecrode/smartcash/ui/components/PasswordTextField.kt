@@ -31,6 +31,7 @@ import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.guilherme_delecrode.smartcash.R
+import com.guilherme_delecrode.smartcash.ui.theme.PrimaryButtonColor
 import com.guilherme_delecrode.smartcash.ui.theme.PrimaryFieldColor
 import com.guilherme_delecrode.smartcash.ui.theme.PrimaryFieldTextColor
 import com.guilherme_delecrode.smartcash.ui.theme.SmartCashTheme
@@ -63,7 +64,7 @@ fun PasswordTextField(
                 Icon(
                     imageVector = Icons.Default.Lock,
                     contentDescription = null,
-                    tint = PrimaryFieldTextColor
+                    tint = PrimaryButtonColor
                 )
             },
             trailingIcon = {
@@ -85,7 +86,7 @@ fun PasswordTextField(
                         } else {
                             if (passwordVisible) "Hide password" else "Show password"
                         },
-                        tint = PrimaryFieldTextColor
+                        tint = PrimaryButtonColor
                     )
                 }
             },
@@ -105,10 +106,8 @@ fun PasswordTextField(
                 if (passwordVisible) VisualTransformation.None else PasswordVisualTransformation()
             },
             colors = TextFieldDefaults.colors(
-                focusedContainerColor = PrimaryFieldColor,
-                unfocusedContainerColor = PrimaryFieldColor,
                 disabledContainerColor = PrimaryFieldColor,
-                focusedIndicatorColor = PrimaryFieldTextColor,
+                focusedIndicatorColor = PrimaryButtonColor,
                 unfocusedIndicatorColor = PrimaryFieldColor,
                 errorIndicatorColor = MaterialTheme.colorScheme.error
             ),

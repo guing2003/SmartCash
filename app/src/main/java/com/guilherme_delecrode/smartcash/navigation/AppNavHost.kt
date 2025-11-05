@@ -5,6 +5,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.guilherme_delecrode.smartcash.ui.screen.login.LoginScreen
+import com.guilherme_delecrode.smartcash.ui.screen.register.RegisterInfoScreen
+import com.guilherme_delecrode.smartcash.ui.screen.register.RegisterPasswordScreen
 
 @Composable
 fun AppNavHost(){
@@ -12,8 +14,18 @@ fun AppNavHost(){
     val navController = rememberNavController()
 
     NavHost(navController = navController, startDestination = AppDestinations.Login.route){
+
+        //Login Flow
         composable(AppDestinations.Login.route) {
-            LoginScreen(navController = navController)
+            LoginScreen(navController)
+        }
+
+        //Register Flow
+        composable(AppDestinations.RegisterInfo.route){
+            RegisterInfoScreen(navController)
+        }
+        composable(AppDestinations.RegisterPassword.route){
+            RegisterPasswordScreen(navController)
         }
 
     }
