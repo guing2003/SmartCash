@@ -33,8 +33,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.guilherme_delecrode.smartcash.navigation.AppDestinations
 import com.guilherme_delecrode.smartcash.ui.components.DefaultTextField
 import com.guilherme_delecrode.smartcash.ui.components.EmailTextField
+import com.guilherme_delecrode.smartcash.ui.components.PrimaryButton
 import com.guilherme_delecrode.smartcash.utils.MaskVisualTransformation
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -178,6 +180,19 @@ fun RegisterInfoScreen(navController: NavController) {
                 keyboardType = KeyboardType.Number,
                 imeAction = ImeAction.Done,
                 visualTransformation = MaskVisualTransformation("###.###.###-##")
+            )
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            PrimaryButton(
+                "Confirmar",
+                onClick = {navController.navigate(AppDestinations.RegisterPassword.route)},
+                modifier = Modifier.fillMaxWidth(),
+                enabled = email.value.isNotEmpty() &&
+                        name.value.isNotEmpty() &&
+                        birthdate.value.isNotEmpty() &&
+                        phone.value.isNotEmpty() &&
+                        cpf.value.isNotEmpty()
             )
         }
     }
