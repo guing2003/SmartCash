@@ -9,4 +9,7 @@ sealed class AppDestinations(val route: String){
     object RegisterInfo : AppDestinations("register_info")
     object RegisterPassword : AppDestinations("register_password")
 
+    //Home Flow
+    object Home: AppDestinations("home")
+
 }
