@@ -143,6 +143,11 @@ fun LoginScreen(navController: NavController) {
             PrimaryButton(
                 text = "ENTRAR",
                 onClick = {
+                    navController.navigate(AppDestinations.Home.route) {
+                        popUpTo(AppDestinations.Login.route) {
+                            inclusive = true
+                        }
+                    }
                 },
                 enabled = email.isNotBlank() && password.isNotBlank()
             )
