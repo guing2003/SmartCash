@@ -118,7 +118,7 @@ fun HomeScreen(navController: NavController) {
 
             Spacer(modifier = Modifier.width(16.dp))
 
-            Column() {
+            Column(modifier = Modifier.weight(1f)) {
                 Text("Categoria")
                 Text("00/00/0000")
             }
