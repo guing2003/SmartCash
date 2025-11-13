@@ -1,5 +1,6 @@
 package com.guilherme_delecrode.smartcash.ui.screen.menu
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -30,6 +31,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.guilherme_delecrode.smartcash.R
+import com.guilherme_delecrode.smartcash.navigation.AppDestinations
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -213,7 +215,14 @@ fun MenuScreen(navController: NavController) {
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(4.dp),
+                        .padding(4.dp)
+                        .clickable(onClick = {
+                            navController.navigate(AppDestinations.Login.route) {
+                                popUpTo(AppDestinations.Menu.route) {
+                                    inclusive = true
+                                }
+                            }
+                        }),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Icon(
