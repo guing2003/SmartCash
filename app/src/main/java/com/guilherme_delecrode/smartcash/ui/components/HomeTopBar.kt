@@ -31,6 +31,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.guilherme_delecrode.smartcash.R
+import com.guilherme_delecrode.smartcash.navigation.AppDestinations
 import com.guilherme_delecrode.smartcash.ui.theme.SmartCashTheme
 
 @Composable
@@ -81,7 +82,7 @@ fun HomeTopBar(navController: NavController) {
                     }
                 }
 
-                IconButton(onClick = { /*ir para o menu*/ }) {
+                IconButton(onClick = { navController.navigate(AppDestinations.Menu.route)}) {
                     Icon(
                         painter = painterResource(id = R.drawable.ic_menu_24),
                         contentDescription = "Menu",
