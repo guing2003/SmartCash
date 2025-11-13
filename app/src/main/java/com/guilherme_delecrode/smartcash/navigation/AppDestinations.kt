@@ -12,5 +12,6 @@ sealed class AppDestinations(val route: String){
     //Home Flow
     object Home: AppDestinations("home")
     object Menu: AppDestinations("menu")
+    object History : AppDestinations("history")
 
 }
