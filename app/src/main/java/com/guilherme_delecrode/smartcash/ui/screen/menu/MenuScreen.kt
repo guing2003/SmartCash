@@ -96,7 +96,10 @@ fun MenuScreen(navController: NavController) {
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(4.dp),
+                        .padding(4.dp)
+                        .clickable(onClick = {
+                            navController.navigate(AppDestinations.History.route)
+                        }),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Icon(
@@ -105,7 +108,7 @@ fun MenuScreen(navController: NavController) {
                         modifier = Modifier.size(48.dp)
                     )
                     Spacer(modifier = Modifier.width(8.dp))
-                    Text("Gerar Relatorio", fontSize = 18.sp)
+                    Text("Histórico de Transações", fontSize = 18.sp)
                 }
             }
 

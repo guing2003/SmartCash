@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.guilherme_delecrode.smartcash.ui.screen.history.HistoryScreen
 import com.guilherme_delecrode.smartcash.ui.screen.home.HomeScreen
 import com.guilherme_delecrode.smartcash.ui.screen.login.LoginScreen
 import com.guilherme_delecrode.smartcash.ui.screen.menu.MenuScreen
@@ -37,6 +38,10 @@ fun AppNavHost(){
 
         composable(AppDestinations.Menu.route){
             MenuScreen(navController)
+        }
+
+        composable(AppDestinations.History.route){
+            HistoryScreen(navController)
         }
 
     }
