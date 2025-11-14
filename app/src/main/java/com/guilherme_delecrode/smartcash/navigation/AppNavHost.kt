@@ -6,8 +6,14 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.guilherme_delecrode.smartcash.ui.screen.history.HistoryScreen
 import com.guilherme_delecrode.smartcash.ui.screen.home.HomeScreen
+import com.guilherme_delecrode.smartcash.ui.screen.info.AboutScreen
+import com.guilherme_delecrode.smartcash.ui.screen.info.FaqScreen
+import com.guilherme_delecrode.smartcash.ui.screen.info.PrivacyPolicyScreen
+import com.guilherme_delecrode.smartcash.ui.screen.info.TermsOfUseScreen
 import com.guilherme_delecrode.smartcash.ui.screen.login.LoginScreen
 import com.guilherme_delecrode.smartcash.ui.screen.menu.MenuScreen
+import com.guilherme_delecrode.smartcash.ui.screen.password.ForgotPasswordScreen
+import com.guilherme_delecrode.smartcash.ui.screen.profile.ProfileScreen
 import com.guilherme_delecrode.smartcash.ui.screen.register.RegisterInfoScreen
 import com.guilherme_delecrode.smartcash.ui.screen.register.RegisterPasswordScreen
 
@@ -42,6 +48,28 @@ fun AppNavHost(){
 
         composable(AppDestinations.History.route){
             HistoryScreen(navController)
+        }
+
+        //Comuns Flow
+        composable(AppDestinations.Faq.route){
+            FaqScreen(navController)
+        }
+        composable(AppDestinations.Terms.route){
+            TermsOfUseScreen(navController)
+        }
+        composable(AppDestinations.Privacy.route){
+            PrivacyPolicyScreen(navController)
+        }
+        composable(AppDestinations.About.route){
+            AboutScreen(navController)
+        }
+
+        //Profile Flow
+        composable(AppDestinations.Profile.route){
+            ProfileScreen(navController)
+        }
+        composable(AppDestinations.ForgotPassword.route){
+            ForgotPasswordScreen(navController)
         }
 
     }

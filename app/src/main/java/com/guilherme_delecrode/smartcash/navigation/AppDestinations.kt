@@ -14,4 +14,14 @@ sealed class AppDestinations(val route: String){
     object Menu: AppDestinations("menu")
     object History : AppDestinations("history")
 
+
+    //Comuns Screen flow
+    object Faq : AppDestinations("faq")
+    object Terms : AppDestinations("terms")
+    object Privacy : AppDestinations("privacy")
+    object About : AppDestinations("about")
+
+    //Profile Flow
+    object Profile : AppDestinations("profile")
+    object ForgotPassword : AppDestinations("forgot_password")
 }
