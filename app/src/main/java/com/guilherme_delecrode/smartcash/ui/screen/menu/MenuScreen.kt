@@ -83,7 +83,10 @@ fun MenuScreen(navController: NavController) {
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(4.dp),
+                        .padding(4.dp)
+                        .clickable(onClick = {
+                            navController.navigate(AppDestinations.ForgotPassword.route)
+                        }),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Icon(

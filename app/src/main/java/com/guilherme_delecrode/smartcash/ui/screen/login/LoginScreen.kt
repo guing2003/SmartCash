@@ -143,7 +143,7 @@ fun LoginScreen(navController: NavController) {
 
             Spacer(modifier = Modifier.height(24.dp))
 
-            TextButton(onClick = {}) {
+            TextButton(onClick = {navController.navigate(AppDestinations.ForgotPassword.route)}) {
                 Text(
                     text = "Esqueci minha senha!",
                     color = MaterialTheme.colorScheme.primary,

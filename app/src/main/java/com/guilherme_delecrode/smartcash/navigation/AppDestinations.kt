@@ -23,4 +23,5 @@ sealed class AppDestinations(val route: String){
 
     //Profile Flow
     object Profile : AppDestinations("profile")
+    object ForgotPassword : AppDestinations("forgot_password")
 }
