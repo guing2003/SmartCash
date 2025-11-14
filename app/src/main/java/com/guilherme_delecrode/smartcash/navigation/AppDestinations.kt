@@ -24,4 +24,8 @@ sealed class AppDestinations(val route: String){
     //Profile Flow
     object Profile : AppDestinations("profile")
     object ForgotPassword : AppDestinations("forgot_password")
+
+    //Cadastro de Receita/Despesa
+    object NewRevenueExpense : AppDestinations("new_revenue_expense")
+
 }
