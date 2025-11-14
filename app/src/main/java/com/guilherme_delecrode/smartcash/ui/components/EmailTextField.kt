@@ -24,7 +24,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.guilherme_delecrode.smartcash.ui.theme.PrimaryButtonColor
 import com.guilherme_delecrode.smartcash.ui.theme.PrimaryFieldColor
-import com.guilherme_delecrode.smartcash.ui.theme.PrimaryFieldTextColor
 import com.guilherme_delecrode.smartcash.ui.theme.SmartCashTheme
 
 
