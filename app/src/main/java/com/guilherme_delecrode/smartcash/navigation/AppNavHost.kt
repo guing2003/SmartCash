@@ -6,6 +6,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.guilherme_delecrode.smartcash.ui.screen.history.HistoryScreen
 import com.guilherme_delecrode.smartcash.ui.screen.home.HomeScreen
+import com.guilherme_delecrode.smartcash.ui.screen.home.NewRevenueExpenseScreen
 import com.guilherme_delecrode.smartcash.ui.screen.info.AboutScreen
 import com.guilherme_delecrode.smartcash.ui.screen.info.FaqScreen
 import com.guilherme_delecrode.smartcash.ui.screen.info.PrivacyPolicyScreen
@@ -70,6 +71,11 @@ fun AppNavHost(){
         }
         composable(AppDestinations.ForgotPassword.route){
             ForgotPasswordScreen(navController)
+        }
+
+        //Cadastro de nova receita/despesa
+        composable(AppDestinations.NewRevenueExpense.route){
+            NewRevenueExpenseScreen(navController)
         }
 
     }
