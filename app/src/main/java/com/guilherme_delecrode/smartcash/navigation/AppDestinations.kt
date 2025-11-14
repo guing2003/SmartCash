@@ -20,4 +20,7 @@ sealed class AppDestinations(val route: String){
     object Terms : AppDestinations("terms")
     object Privacy : AppDestinations("privacy")
     object About : AppDestinations("about")
+
+    //Profile Flow
+    object Profile : AppDestinations("profile")
 }

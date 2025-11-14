@@ -12,6 +12,7 @@ import com.guilherme_delecrode.smartcash.ui.screen.info.PrivacyPolicyScreen
 import com.guilherme_delecrode.smartcash.ui.screen.info.TermsOfUseScreen
 import com.guilherme_delecrode.smartcash.ui.screen.login.LoginScreen
 import com.guilherme_delecrode.smartcash.ui.screen.menu.MenuScreen
+import com.guilherme_delecrode.smartcash.ui.screen.profile.ProfileScreen
 import com.guilherme_delecrode.smartcash.ui.screen.register.RegisterInfoScreen
 import com.guilherme_delecrode.smartcash.ui.screen.register.RegisterPasswordScreen
 
@@ -62,5 +63,9 @@ fun AppNavHost(){
             AboutScreen(navController)
         }
 
+        //Profile Flow
+        composable(AppDestinations.Profile.route){
+            ProfileScreen(navController)
+        }
     }
 }
